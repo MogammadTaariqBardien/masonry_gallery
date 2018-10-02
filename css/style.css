@@ -1,0 +1,262 @@
+/*
+  These are some base styles so that our tutorial looks good.
+  Let's go through the important bits real quick
+*/
+:root {
+    --yellow: #ffc600;
+    --black: #272727;
+  }
+  
+  html {
+    /* border-box box model allows us to add padding and border to our elements without increasing their size */
+    box-sizing: border-box;
+    /* A system font stack so things load nice and quick! */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 900;
+    font-size: 10px;
+    color: var(--black);
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+  }
+  
+  /*
+    WAT IS THIS?!
+    We inherit box-sizing: border-box; from our <html> selector
+    Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+  */
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    background-image: url("./images/topography.svg"),
+      linear-gradient(110deg, #f93d66, #6d47d9);
+    background-size: 340px, auto;
+    min-height: calc(100vh - 100px);
+    margin: 50px;
+    /* background: white; */
+    background-attachment: fixed;
+    letter-spacing: -1px;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 5px 0;
+  }
+  /* Each item in our grid will contain numbers */
+  .container > div {
+    /* We center the contents of these items. You can also do this with flexbox too! */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    font-size: 35px;
+    background-color: rgb(255, 92, 51);
+    height: 300px;
+    width: auto;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .item1 {
+    background-image: url("../images/zainab.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 20%;
+    background-size: 100% ;
+  }
+
+  .item2 {
+    background-image: url("../images/ashton.jpg");
+    background-repeat: no-repeat;
+    background-position-x: 40%;
+    background-size: 100%;
+  }
+
+  .item3 {
+    background-image: url("../images/daniel.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+    background-size: 100%;
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+
+  .item4 {
+    background-image: url("../images/evan.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 10%;
+    background-size: 100% ;
+  }
+
+  .item5 {
+    background-image: url("../images/gcobisa.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 10%;
+    background-size: 100% ;
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .item6 {
+    background-image: url("../images/gedeon.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 40%;
+    background-size: 100% ;
+  }
+  
+  .item7 {
+    background-image: url("../images/jessie.jpeg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: 100% ;
+  }
+
+  .item8 {
+    background-image: url("../images/john-paul.jpg");
+    background-repeat: no-repeat;
+    background-position-x: 40%;
+    background-size: 100% 300px;
+  }
+
+  .item9 {
+    background-image: url("../images/josh.png");
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+    background-size: 100% ;
+  }
+
+  .item10 {
+    background-image: url("../images/kaylem.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 10%;
+    background-size: 100% 600px;
+  }
+
+  .item11 {
+    background-image: url("../images/litha.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 80%;
+    background-size: 100% ;
+  }
+
+  .item12 {
+    background-image: url("../images/marlon.jpg");
+    background-repeat: no-repeat;
+    background-position-x: 40%;
+    background-size: 100%;
+  }
+
+  .item13 {
+    background-image: url("../images/michael.jpeg");
+    background-repeat: no-repeat;
+    background-position-y: 20%;
+    background-size: 100% ;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    
+  }
+
+  .item14 {
+    background-image: url("../images/miguel.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+    background-size: 100% ;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 7;
+    height: 350px !important;
+    
+  }
+
+  .item15 {
+    background-image: url("../images/natheer.jpg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: 100% ;
+    height: 350px !important;
+    
+  }
+
+  .item16 {
+    background-image: url("../images/reagan.JPG");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: 100% ;
+    height: 350px !important;
+    
+  }
+
+  .item17 {
+    background-image: url("../images/shakeel.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 10%;
+    background-size: 100%;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 8;
+    height: 500px !important; 
+  }
+
+  .item18 {
+    background-image: url("../images/shanton.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 1%;
+    background-size: 100% ;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item19 {
+    background-image: url("../images/sheldon.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 15%;
+    background-size: 100% ;
+  }
+
+  .item20 {
+    background-image: url("../images/taariq.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 90%;
+    background-size: 100% 500px;
+  }
+
+  .item21 {
+    background-image: url("../images/taufeeq.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 10%;
+    background-size: 100% ;
+  }
+
+  .item22 {
+    background-image: url("../images/tyrone.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 5%;
+    background-size: 100% ;
+    
+  }
+
+  .item23 {
+    background-image: url("../images/urick.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 5%;
+    background-size: 100% ;
+
+  }
+
+  .item24 {
+    background-image: url("../images/warnita.jpg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: 100% ;
+  }
