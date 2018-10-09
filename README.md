@@ -33,7 +33,7 @@ Tools:
 - Base Folders and files added
 - Live Link Created
 
-2018-10-09:
+2018-10-09
 - Readme Updated
 
 ## Contributors
